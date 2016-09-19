@@ -42,10 +42,29 @@ public class SeguridadSocial {
     }
 
     public Persona obtenerPersonaPorDNI(String dni) {
-        return dni;
+        boolean eq = false;
+        int i=0;
+        for(i=0;i<personasList.size();i++){
+            if(dni.equals(personasList.get(i).getDNI())) {
+                eq = true;
+                break;
+            }
+        }
+        if(eq == false){return null;}else{return personasList.get(i);}
+
     }
 
     public Persona obtenerPersonaPorNumSS(String numSS) {
+
+        boolean eq = false;
+        int i=0;
+        for(i=0;i<personasList.size();i++){
+            if(numSS.equals(personasList.get(i).getNumSS())) {
+                eq = true;
+                break;
+            }
+        }
+        if(eq == false){return null;}else{return personasList.get(i);}
     }
 
     public List<Persona> obtenerPersonasRangoSalarial(double min, double max){
