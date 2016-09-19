@@ -68,6 +68,20 @@ public class SeguridadSocial {
     }
 
     public List<Persona> obtenerPersonasRangoSalarial(double min, double max){
+    List<Persona> salarios = new ArrayList<>();
+        boolean eq = false;
+        int i=0;
+        for(i=0;i<personasList.size();i++){
+            double salario = personasList.get(i).getSalario();
+            if(salario == min || salario > min && salario < max || salario == max) {
+                salarios.add(personasList.get(i));
+                eq = true;
+                break;
+            }
+        }
+        if(eq == false){return null;}else{salarios ;}
+    }
+
     }
 
     public List<Persona> obtenerPersonasMayoresQue(int edad){
