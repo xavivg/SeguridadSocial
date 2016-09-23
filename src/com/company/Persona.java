@@ -85,4 +85,15 @@ public class Persona {
 
     }
 
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "DNI='" + DNI + '\'' +
+                ", numSS='" + numSS + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", salario=" + salario +
+                '}';
+    }
 }
