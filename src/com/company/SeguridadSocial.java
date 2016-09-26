@@ -134,7 +134,6 @@ public class SeguridadSocial {
 
         return new Persona[] {personamax, personamin};
     }
-
     @Override
     public String toString() {
         return "SeguridadSocial{" +

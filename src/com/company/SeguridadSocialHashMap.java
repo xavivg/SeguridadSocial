@@ -64,15 +64,29 @@ public class SeguridadSocialHashMap {
         return edades;
 
     }
-    public List<Persona> obtenerTodas(){
+    public List<Persona> obtenerTodas() {
         List<Persona> all = new ArrayList<>();
-        for (Persona persona : personaMapDni.values()){
+        for (Persona persona : personaMapDni.values()) {
 
             all.add(persona);
         }
-
-
         return all;
     }
+    public Persona[] obtenersalariomaxymin() {
+        int i = 0;
+        Persona personamax = new Persona();
+        Persona personamin = new Persona();
+        for (Persona persona : personaMapDni.values() ) {
+
+            if(personamin.getSalario()>personaMapDni.get(i).getSalario()){
+                personamin = personaMapDni.get(i);
+            }
+            if(personamax.getSalario()<personaMapDni.get(i).getSalario()){
+                personamax = personaMapDni.get(i);
+            }
+        }
+        return new Persona[] {personamax, personamin};
+    }
+
 }
 
