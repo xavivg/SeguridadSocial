@@ -19,7 +19,7 @@ public class SeguridadSocial {
         boolean eq = false;
 
         for (int i = 0; i < personasList.size(); i++) {  /*<-- persona personaactual : personalist --> for each*/
-            if (personasList.equals(personasList.get(i))) {
+            if (personasList.equals(personasList.get(i))) { //TODO: hacer el equals por separado, no se contempla la opcion de que coincida uno si y el otro no
                 eq = true;
                 break;
             }
