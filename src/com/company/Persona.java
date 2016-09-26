@@ -23,7 +23,7 @@ public class Persona {
         this.salario = salario;
 
     }
-
+public Persona(){}
 
     public String getDNI() {
         return DNI;

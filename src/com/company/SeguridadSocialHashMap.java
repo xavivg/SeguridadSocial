@@ -69,8 +69,8 @@ public class SeguridadSocialHashMap {
         for (Persona persona : personaMapDni.values()){
 
             all.add(persona);
-
         }
+
 
         return all;
     }

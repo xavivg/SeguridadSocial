@@ -118,6 +118,23 @@ public class SeguridadSocial {
         return personasList;
     }
 
+    public Persona[] obtenersalariomaxymin(){
+        int i = 0;
+        Persona personamax = new Persona();
+        Persona personamin = new Persona();
+        for (i = 0; i < personasList.size(); i++) {
+
+            if(personamin.getSalario()>personasList.get(i).getSalario()){
+                personamin = personasList.get(i);
+            }
+            if(personamax.getSalario()<personasList.get(i).getSalario()){
+                personamax = personasList.get(i);
+            }
+        }
+
+        return new Persona[] {personamax, personamin};
+    }
+
     @Override
     public String toString() {
         return "SeguridadSocial{" +
